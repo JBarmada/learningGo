@@ -1,4 +1,4 @@
-module example/hello
+module github.com/JBarmada/LearningGo
 
 go 1.25.4
 
