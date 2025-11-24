@@ -10,6 +10,12 @@ I want to learn Go :D
 ## modules
 import “fmt” <- functions for formatting text
 
+import "math/rand" <- standard random gens
+
+import "log" <- logging made easy
+
+import "errors" <- err module
+
 can hard code a module location if the module functions should be found locally, using the edit -replace command.
 
 ## functions
