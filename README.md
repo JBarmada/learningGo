@@ -2,8 +2,9 @@
 I want to learn Go :D
 
 # stuff i learned so far
-import “fmt” <- functions for formatting text
 
+## modules
+import “fmt” <- functions for formatting text
 can hard code a module location if the module functions should be found locally, using the edit -replace command.
 
 ## functions
