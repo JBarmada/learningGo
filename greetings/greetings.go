@@ -18,6 +18,23 @@ func Hello(name string) (string, error) {
 	return message, nil
 }
 
+func MultiHello(names []string) (map[string]string, error){
+	// a map to associate names with messages
+	message := make(map[string]string)
+
+	// go thru the slice of names, and get a message for each name
+	for _, name :=  range names {
+		greeting, err := Hello(name)
+		if err != nil {
+			return nil, err
+		}
+		// map the greeting to the name
+		message[name] = greeting
+	}
+	return message, nil
+}
+
+// randGreeting returns a greeting chosen at random from a set of greeting messages.
 func randGreeting() string {
 	// a slice of greetings
 	formats := []string{

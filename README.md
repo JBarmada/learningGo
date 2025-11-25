@@ -6,17 +6,17 @@ I want to learn Go :D
 - functions
 - variables
 - slices
+- backward compatability
+- maps
+- for loops
 
 ## modules
-import “fmt” <- functions for formatting text
+- import “fmt” <- functions for formatting text
+- import "math/rand" <- standard random gens
+- import "log" <- logging made easy
+- import "errors" <- err module
 
-import "math/rand" <- standard random gens
-
-import "log" <- logging made easy
-
-import "errors" <- err module
-
-can hard code a module location if the module functions should be found locally, using the edit -replace command.
+Can hard code a module location if the module functions should be found locally, using the edit -replace command.
 
 ## functions
 private functions start with a lowercase letter
@@ -40,4 +40,27 @@ Has the following useful functions:
 Name of functions makes it pretty obvious
 
 append(), copy(), make([]T, l, c), appendByte([]byte, data byte)
+
+## bck-comp
+dont change function parameters, make new ones.
+
+## maps
+var m map[key T]value T
+
+functions: 
+- make(map[k T]v T), delete(m, key)
+
+features: 
+- test for existence: value, bool := map[key]
+- keys must be comparable using ==, bool, string,numeric,pointer,channel,interface,structs,arrays
+
+## for loops
+structure: 
+- for i := value; i != up to; i = i.next {}
+- in a slice you can do this:
+    - for index, value := slice {}
+- in a map you have:
+    - for key, value := map {}
+
+
 

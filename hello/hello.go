@@ -14,12 +14,15 @@ func main() {
 	log.SetPrefix("logger of geetings: ")
 	log.SetFlags(0)
 
-	// call hello function (request a greeting)
-	message, err := greetings.Hello("Jad")
+	// slice of names
+	names := []string{"Jad", "Dad", "Mad"}
+
+	// call hello function (request a greeting) for each name in the slice
+	messages, err := greetings.MultiHello(names)
 	// check for an error 
 	if err != nil {
 		log.Fatal(err)
 	}
 	// get a greeting and print it <- will not reach due to Fatal function
-	fmt.Println(message)
+	fmt.Println(messages)
 }
